@@ -8,7 +8,7 @@ import { Label } from './ui/label';
 import { Button } from './ui/button';
 import { Checkbox } from './ui/checkbox';
 import z from 'zod';
-import { CiLock } from "react-icons/ci";
+
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -86,7 +86,7 @@ const Login = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={`w-full px-3 py-2 border-b-4 ${errors.password ? 'border-red-600' : 'border-b-white'} rounded bg-transparent text-white focus:outline-none focus:border-teal-400`}
+            className={`w-full px-3 py-2 border ${errors.password ? 'border-red-600' : 'border-gray-600'} rounded bg-transparent text-white focus:outline-none focus:border-teal-400`}
           />
           {errors.password && <p className="text-red-500 text-sm mt-1">{errors.password}</p>}
 
